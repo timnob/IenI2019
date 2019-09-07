@@ -10,7 +10,7 @@ class Speler {
     this.laatsteGok = null;
     this.budget = null;
   }
-  
+
   geefInvoer() {
     // kies een getal
 
@@ -43,13 +43,13 @@ class Dobbelsteen {
     this.G = round(random(0,255));
     this.B = round(random(0,255));
   }
-  
+
   teken() {
     push();
     fill(this.R,this.G,this.B);
     rect(this.x,this.y,this.grootte,this.grootte);
 
-    fill('white');    
+    fill('white');
     if (this.ogen != 1) {ellipse(this.x + this.grootte / 6 * 1,this.y + this.grootte / 6 * 1,this.diameterOgen,this.diameterOgen);}
     if (this.ogen == 6) {ellipse(this.x + this.grootte / 6 * 3,this.y + this.grootte / 6 * 1,this.diameterOgen,this.diameterOgen);}
     if (this.ogen > 3) {ellipse(this.x + this.grootte / 6 * 5,this.y + this.grootte / 6 * 1,this.diameterOgen,this.diameterOgen);}
@@ -75,7 +75,7 @@ class Gokspel {
     this.steen = d;
     this.actief = null;
   }
-  
+
   nieuw() {
     this.actief = false;
     this.speler.laatsteGok = null;
@@ -85,11 +85,11 @@ class Gokspel {
 
   controleerInvoer() {
     // mag deze invoer?
-    
+
     if (!this.actief) {
       this.actief = true;
     }
-    
+
     if (this.speler.budget > 0) {
       this.verwerkInvoer();
       this.teken();
@@ -98,7 +98,7 @@ class Gokspel {
 
   verwerkInvoer() {
     // verwerk de invoer
-    
+
     this.steen.gooi();
     if (this.speler.laatsteGok == this.steen.ogen) {
       this.speler.budget += this.beloningGoed;
@@ -113,7 +113,7 @@ class Gokspel {
 
   teken() {
     // teken de speltoestand
-    
+
     push();
     noStroke();
     textFont("Courier");
@@ -146,11 +146,10 @@ var canvas;
 
 function setup() {
   // initialisatie
-  
+
   var myCanvas = createCanvas(700,400);
   canvas = myCanvas;
   myCanvas.parent('processing');
-  noLoop();
   speler = new Speler('Ron');
   steen = new Dobbelsteen();
   spel = new Gokspel(speler,steen);
@@ -162,7 +161,7 @@ function keyTyped() {
   spel.speler.geefInvoer();
   if (spel.speler.budget <= 0 && keyCode == 32) {
     spel.nieuw();
-  }  
+  }
 }
 /*  **********************************************************
     **               EINDE hoofdprogramma                   **

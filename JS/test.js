@@ -9,6 +9,6 @@ function draw() {
   noStroke();
   fill('steelblue');
   ellipse(0,0,800);
-  fill('deepskyblue');  
+  fill('deepskyblue');
   ellipse(450,450,400);
 }
