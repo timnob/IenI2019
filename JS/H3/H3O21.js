@@ -261,8 +261,7 @@ function setup() {
 }
 
 function draw() {
-  // alleen voor testen
-  spel.teken();
+  // spel.teken();
 }
 
 function mousePressed() {
@@ -272,15 +271,14 @@ function mousePressed() {
   else {
     if (spel.afgelopen) {
       spel.nieuw();
-      spel.teken();
     }
     else {
       if (spel.controleerZet()) {
         spel.update();
-        spel.teken();
       }
     }
   }
+  spel.teken();
 }
 
 
