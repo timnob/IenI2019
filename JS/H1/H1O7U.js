@@ -1,7 +1,7 @@
 function setup() {
-  var myCanvas = createCanvas(450,450);
+  canvas = createCanvas(450,450);
   background('lavender');
-  myCanvas.parent('processing');
+  canvas.parent('processing');
   noLoop();
   colorMode(RGB, 255, 255, 255, 1);
   fill(178, 34, 34,0.5);

@@ -12,8 +12,8 @@ function preload() {
 }
 
 function setup() {
-  var myCanvas = createCanvas(901,601);
-  myCanvas.parent('processing');
+  canvas = createCanvas(901,601);
+  canvas.parent('processing');
   celGrootte = width / aantalKolommenRaster;
 }
 

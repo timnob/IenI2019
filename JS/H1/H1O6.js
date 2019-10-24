@@ -1,7 +1,7 @@
 function setup() {
-  var myCanvas = createCanvas(900,200);
+  canvas = createCanvas(900,200);
   background('lavender');
-  myCanvas.parent('processing');
+  canvas.parent('processing');
   noLoop();
 }
 

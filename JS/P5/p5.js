@@ -8855,7 +8855,7 @@ module.exports={
             "type": "Number",
             "readonly": "",
             "example": [
-                "\n<div>\n<code>\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n}\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  //move the canvas to the horizontal mouse position\n  //rela                    tive to the window\n  myCanvas.position(winMouseX + 1, windowHeight / 2);\n\n  //the y of the square is relative to the canvas\n  rect(20, mouseY, 60, 60);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\ncanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  canvas = createCanvas(100, 100);\n}\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  //move the canvas to the horizontal mouse position\n  //rela                    tive to the window\n  canvas.position(winMouseX + 1, windowHeight / 2);\n\n  //the y of the square is relative to the canvas\n  rect(20, mouseY, 60, 60);\n}\n</code>\n</div>"
             ],
             "alt": "60x60 black rect y moves with mouse y and fuschia canvas moves with mouse x",
             "class": "p5",
@@ -8871,7 +8871,7 @@ module.exports={
             "type": "Number",
             "readonly": "",
             "example": [
-                "\n<div>\n<code>\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n}\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  //move the canvas to the vertical mouse position\n  //rel                    ative to the window\n  myCanvas.position(windowWidth / 2, winMouseY + 1);\n\n  //the x of the square is relative to the canvas\n  rect(mouseX, 20, 60, 60);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\ncanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  canvas = createCanvas(100, 100);\n}\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  //move the canvas to the vertical mouse position\n  //rel                    ative to the window\n  canvas.position(windowWidth / 2, winMouseY + 1);\n\n  //the x of the square is relative to the canvas\n  rect(mouseX, 20, 60, 60);\n}\n</code>\n</div>"
             ],
             "alt": "60x60 black rect x moves with mouse x and fuschia canvas y moves with mouse y",
             "class": "p5",
@@ -8887,7 +8887,7 @@ module.exports={
             "type": "Number",
             "readonly": "",
             "example": [
-                "\n<div>\n<code>\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  noStroke();\n  fill(237, 34, 93);\n}\n\nfunction draw() {\n  clear();\n  //the difference between previous and\n  //current x position is the horizontal mouse speed\n  var speed = abs(winMouseX - pwinMouseX);\n  //change the size of the circle\n  //according to the horizontal speed\n  ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);\n  //move the canvas to the mouse position\n  myCanvas.position(winMouseX + 1, winMouseY + 1);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\ncanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  canvas = createCanvas(100, 100);\n  noStroke();\n  fill(237, 34, 93);\n}\n\nfunction draw() {\n  clear();\n  //the difference between previous and\n  //current x position is the horizontal mouse speed\n  var speed = abs(winMouseX - pwinMouseX);\n  //change the size of the circle\n  //according to the horizontal speed\n  ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);\n  //move the canvas to the mouse position\n  canvas.position(winMouseX + 1, winMouseY + 1);\n}\n</code>\n</div>"
             ],
             "alt": "fuschia ellipse moves with mouse x and y. Grows and shrinks with mouse speed",
             "class": "p5",
@@ -8903,7 +8903,7 @@ module.exports={
             "type": "Number",
             "readonly": "",
             "example": [
-                "\n<div>\n<code>\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  noStroke();\n  fill(237, 34, 93);\n}\n\nfunction draw() {\n  clear();\n  //the difference between previous and\n  //current y position is the vertical mouse speed\n  var speed = abs(winMouseY - pwinMouseY);\n  //change the size of the circle\n  //according to the vertical speed\n  ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);\n  //move the canvas to the mouse position\n  myCanvas.position(winMouseX + 1, winMouseY + 1);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\ncanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  canvas = createCanvas(100, 100);\n  noStroke();\n  fill(237, 34, 93);\n}\n\nfunction draw() {\n  clear();\n  //the difference between previous and\n  //current y position is the vertical mouse speed\n  var speed = abs(winMouseY - pwinMouseY);\n  //change the size of the circle\n  //according to the vertical speed\n  ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);\n  //move the canvas to the mouse position\n  canvas.position(winMouseX + 1, winMouseY + 1);\n}\n</code>\n</div>"
             ],
             "alt": "fuschia ellipse moves with mouse x and y. Grows and shrinks with mouse speed",
             "class": "p5",
@@ -9146,7 +9146,7 @@ module.exports={
             "itemtype": "method",
             "name": "saveCanvas",
             "example": [
-                "\n <div class='norender notest'><code>\n function setup() {\n var c = createCanvas(100, 100);\n background(255, 0, 0);\n saveCanvas(c, 'myCanvas', 'jpg');\n }\n </code></div>\n <div class='norender notest'><code>\n // note that this example has the same result as above\n // if no canvas is specified, defaults to main canvas\n function setup() {\n var c = createCanvas(100, 100);\n background(255, 0, 0);\n saveCanvas('myCanvas', 'jpg');\n\n // all of the following are valid\n saveCanvas(c, 'myCanvas', 'jpg');\n saveCanvas(c, 'myCanvas.jpg');\n saveCanvas(c, 'myCanvas');\n saveCanvas(c);\n saveCanvas('myCanvas', 'png');\n saveCanvas('myCanvas');\n saveCanvas();\n }\n </code></div>"
+                "\n <div class='norender notest'><code>\n function setup() {\n var c = createCanvas(100, 100);\n background(255, 0, 0);\n saveCanvas(c, 'canvas', 'jpg');\n }\n </code></div>\n <div class='norender notest'><code>\n // note that this example has the same result as above\n // if no canvas is specified, defaults to main canvas\n function setup() {\n var c = createCanvas(100, 100);\n background(255, 0, 0);\n saveCanvas('canvas', 'jpg');\n\n // all of the following are valid\n saveCanvas(c, 'canvas', 'jpg');\n saveCanvas(c, 'canvas.jpg');\n saveCanvas(c, 'canvas');\n saveCanvas(c);\n saveCanvas('canvas', 'png');\n saveCanvas('canvas');\n saveCanvas();\n }\n </code></div>"
             ],
             "alt": "no image displayed\n no image displayed\n no image displayed",
             "class": "p5",
@@ -11103,7 +11103,7 @@ module.exports={
         {
             "file": "src/io/files.js",
             "line": 1329,
-            "description": "<p>Save an image, text, json, csv, wav, or html. Prompts download to\nthe client&#39;s computer. <b>Note that it is not recommended to call save()\nwithin draw if it&#39;s looping, as the save() function will open a new save\ndialog every frame.</b></p>\n<p>The default behavior is to save the canvas as an image. You can\noptionally specify a filename.\nFor example:</p>\n <pre class='language-javascript'><code>\n save();\n save(&#39;myCanvas.jpg&#39;); // save a specific canvas with a filename\n </code></pre>\n\n<p>Alternately, the first parameter can be a pointer to a canvas\np5.Element, an Array of Strings,\nan Array of JSON, a JSON object, a p5.Table, a p5.Image, or a\np5.SoundFile (requires p5.sound). The second parameter is a filename\n(including extension). The third parameter is for options specific\nto this type of object. This method will save a file that fits the\ngiven paramaters. For example:</p>\n\n <pre class='language-javascript'><code>\n // Saves canvas as an image\n save('myCanvas.jpg');\n\n // Saves pImage as a png image\n var img = createImage(10, 10);\n save(img, 'my.png');\n\n // Saves canvas as an image\n var cnv = createCanvas(100, 100);\n save(cnv, 'myCanvas.jpg');\n\n // Saves p5.Renderer object as an image\n var gb = createGraphics(100, 100);\n save(gb, 'myGraphics.jpg');\n\n var myTable = new p5.Table();\n\n // Saves table as html file\n save(myTable, 'myTable.html');\n\n // Comma Separated Values\n save(myTable, 'myTable.csv');\n\n // Tab Separated Values\n save(myTable, 'myTable.tsv');\n\n var myJSON = { a: 1, b: true };\n\n // Saves pretty JSON\n save(myJSON, 'my.json');\n\n // Optimizes JSON filesize\n save(myJSON, 'my.json', true);\n\n // Saves array of strings to a text file with line breaks after each item\n var arrayOfStrings = ['a', 'b'];\n save(arrayOfStrings, 'my.txt');\n </code></pre>",
+            "description": "<p>Save an image, text, json, csv, wav, or html. Prompts download to\nthe client&#39;s computer. <b>Note that it is not recommended to call save()\nwithin draw if it&#39;s looping, as the save() function will open a new save\ndialog every frame.</b></p>\n<p>The default behavior is to save the canvas as an image. You can\noptionally specify a filename.\nFor example:</p>\n <pre class='language-javascript'><code>\n save();\n save(&#39;canvas.jpg&#39;); // save a specific canvas with a filename\n </code></pre>\n\n<p>Alternately, the first parameter can be a pointer to a canvas\np5.Element, an Array of Strings,\nan Array of JSON, a JSON object, a p5.Table, a p5.Image, or a\np5.SoundFile (requires p5.sound). The second parameter is a filename\n(including extension). The third parameter is for options specific\nto this type of object. This method will save a file that fits the\ngiven paramaters. For example:</p>\n\n <pre class='language-javascript'><code>\n // Saves canvas as an image\n save('canvas.jpg');\n\n // Saves pImage as a png image\n var img = createImage(10, 10);\n save(img, 'my.png');\n\n // Saves canvas as an image\n var cnv = createCanvas(100, 100);\n save(cnv, 'canvas.jpg');\n\n // Saves p5.Renderer object as an image\n var gb = createGraphics(100, 100);\n save(gb, 'myGraphics.jpg');\n\n var myTable = new p5.Table();\n\n // Saves table as html file\n save(myTable, 'myTable.html');\n\n // Comma Separated Values\n save(myTable, 'myTable.csv');\n\n // Tab Separated Values\n save(myTable, 'myTable.tsv');\n\n var myJSON = { a: 1, b: true };\n\n // Saves pretty JSON\n save(myJSON, 'my.json');\n\n // Optimizes JSON filesize\n save(myJSON, 'my.json', true);\n\n // Saves array of strings to a text file with line breaks after each item\n var arrayOfStrings = ['a', 'b'];\n save(arrayOfStrings, 'my.txt');\n </code></pre>",
             "itemtype": "method",
             "name": "save",
             "params": [
@@ -55555,11 +55555,11 @@ p5.prototype.pmouseY = 0;
  * @example
  * <div>
  * <code>
- * var myCanvas;
+ * canvas;
  *
  * function setup() {
  *   //use a variable to store a pointer to the canvas
- *   myCanvas = createCanvas(100, 100);
+ *   canvas = createCanvas(100, 100);
  * }
  *
  * function draw() {
@@ -55568,7 +55568,7 @@ p5.prototype.pmouseY = 0;
  *
  *   //move the canvas to the horizontal mouse position
  *   //rela                    tive to the window
- *   myCanvas.position(winMouseX + 1, windowHeight / 2);
+ *   canvas.position(winMouseX + 1, windowHeight / 2);
  *
  *   //the y of the square is relative to the canvas
  *   rect(20, mouseY, 60, 60);
@@ -55592,11 +55592,11 @@ p5.prototype.winMouseX = 0;
  * @example
  * <div>
  * <code>
- * var myCanvas;
+ * canvas;
  *
  * function setup() {
  *   //use a variable to store a pointer to the canvas
- *   myCanvas = createCanvas(100, 100);
+ *   canvas = createCanvas(100, 100);
  * }
  *
  * function draw() {
@@ -55605,7 +55605,7 @@ p5.prototype.winMouseX = 0;
  *
  *   //move the canvas to the vertical mouse position
  *   //rel                    ative to the window
- *   myCanvas.position(windowWidth / 2, winMouseY + 1);
+ *   canvas.position(windowWidth / 2, winMouseY + 1);
  *
  *   //the x of the square is relative to the canvas
  *   rect(mouseX, 20, 60, 60);
@@ -55630,11 +55630,11 @@ p5.prototype.winMouseY = 0;
  * @example
  * <div>
  * <code>
- * var myCanvas;
+ * canvas;
  *
  * function setup() {
  *   //use a variable to store a pointer to the canvas
- *   myCanvas = createCanvas(100, 100);
+ *   canvas = createCanvas(100, 100);
  *   noStroke();
  *   fill(237, 34, 93);
  * }
@@ -55648,7 +55648,7 @@ p5.prototype.winMouseY = 0;
  *   //according to the horizontal speed
  *   ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);
  *   //move the canvas to the mouse position
- *   myCanvas.position(winMouseX + 1, winMouseY + 1);
+ *   canvas.position(winMouseX + 1, winMouseY + 1);
  * }
  * </code>
  * </div>
@@ -55671,11 +55671,11 @@ p5.prototype.pwinMouseX = 0;
  * @example
  * <div>
  * <code>
- * var myCanvas;
+ * canvas;
  *
  * function setup() {
  *   //use a variable to store a pointer to the canvas
- *   myCanvas = createCanvas(100, 100);
+ *   canvas = createCanvas(100, 100);
  *   noStroke();
  *   fill(237, 34, 93);
  * }
@@ -55689,7 +55689,7 @@ p5.prototype.pwinMouseX = 0;
  *   //according to the vertical speed
  *   ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);
  *   //move the canvas to the mouse position
- *   myCanvas.position(winMouseX + 1, winMouseY + 1);
+ *   canvas.position(winMouseX + 1, winMouseY + 1);
  * }
  * </code>
  * </div>
@@ -57219,7 +57219,7 @@ p5.prototype.createImage = function(width, height) {
  * function setup() {
  *   var c = createCanvas(100, 100);
  *   background(255, 0, 0);
- *   saveCanvas(c, 'myCanvas', 'jpg');
+ *   saveCanvas(c, 'canvas', 'jpg');
  * }
  * </code></div>
  * <div class='norender notest'><code>
@@ -57228,15 +57228,15 @@ p5.prototype.createImage = function(width, height) {
  * function setup() {
  *   var c = createCanvas(100, 100);
  *   background(255, 0, 0);
- *   saveCanvas('myCanvas', 'jpg');
+ *   saveCanvas('canvas', 'jpg');
  *
  *   // all of the following are valid
- *   saveCanvas(c, 'myCanvas', 'jpg');
- *   saveCanvas(c, 'myCanvas.jpg');
- *   saveCanvas(c, 'myCanvas');
+ *   saveCanvas(c, 'canvas', 'jpg');
+ *   saveCanvas(c, 'canvas.jpg');
+ *   saveCanvas(c, 'canvas');
  *   saveCanvas(c);
- *   saveCanvas('myCanvas', 'png');
- *   saveCanvas('myCanvas');
+ *   saveCanvas('canvas', 'png');
+ *   saveCanvas('canvas');
  *   saveCanvas();
  * }
  * </code></div>
@@ -60760,7 +60760,7 @@ p5.PrintWriter = function(filename, extension) {
  *  For example:</p>
  * <pre class='language-javascript'><code>
  * save();
- * save('myCanvas.jpg'); // save a specific canvas with a filename
+ * save('canvas.jpg'); // save a specific canvas with a filename
  * </code></pre>
  *
  *  <p>Alternately, the first parameter can be a pointer to a canvas
@@ -60773,7 +60773,7 @@ p5.PrintWriter = function(filename, extension) {
  *
  * <pre class='language-javascript'><code>
  * // Saves canvas as an image
- * save('myCanvas.jpg');
+ * save('canvas.jpg');
  *
  * // Saves pImage as a png image
  * var img = createImage(10, 10);
@@ -60781,7 +60781,7 @@ p5.PrintWriter = function(filename, extension) {
  *
  * // Saves canvas as an image
  * var cnv = createCanvas(100, 100);
- * save(cnv, 'myCanvas.jpg');
+ * save(cnv, 'canvas.jpg');
  *
  * // Saves p5.Renderer object as an image
  * var gb = createGraphics(100, 100);

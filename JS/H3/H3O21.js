@@ -251,8 +251,8 @@ class VierOpEenRij {
 
 
 function setup() {
-  var myCanvas = createCanvas(700,400);
-  myCanvas.parent('processing');
+  canvas = createCanvas(700,400);
+  canvas.parent('processing');
   bassie = new Speler('Bassie');
   adriaan = new Speler('Adriaan');
   spel = new VierOpEenRij(bassie,adriaan);

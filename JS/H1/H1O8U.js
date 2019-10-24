@@ -3,9 +3,9 @@ var variabeleB = 4;
 var uitkomst;
 
 function setup() {
-  var myCanvas = createCanvas(1000,650);
+  canvas = createCanvas(1000,650);
   background('orange');
-  myCanvas.parent('processing');
+  canvas.parent('processing');
   textFont("Georgia");
   textSize(40);
   fill('white');

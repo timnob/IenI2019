@@ -2,8 +2,8 @@ var xToby = 225;
 var yToby = 5;
 
 function setup() {
-  var myCanvas = createCanvas(450,450);
-  myCanvas.parent('processing');
+  canvas = createCanvas(450,450);
+  canvas.parent('processing');
 }
 
 function draw() {

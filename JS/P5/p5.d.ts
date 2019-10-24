@@ -4146,7 +4146,7 @@ declare class p5 {
    *   can optionally specify a filename. For example: 
    * 
    *  
-   *   save(); save('myCanvas.jpg'); // save a specific 
+   *   save(); save('canvas.jpg'); // save a specific 
    *   canvas with a filename  
    * 
    *   Alternately, the first parameter can be a pointer 
@@ -4160,11 +4160,11 @@ declare class p5 {
    *   example: 
    * 
    *  
-   *   // Saves canvas as an image save('myCanvas.jpg'); 
+   *   // Saves canvas as an image save('canvas.jpg'); 
    *   // Saves pImage as a png image var img = 
    *   createImage(10, 10); save(img, 'my.png'); // Saves 
    *   canvas as an image var cnv = createCanvas(100, 
-   *   100); save(cnv, 'myCanvas.jpg'); // Saves 
+   *   100); save(cnv, 'canvas.jpg'); // Saves 
    *   p5.Renderer object as an image var gb = 
    *   createGraphics(100, 100); save(gb, 
    *   'myGraphics.jpg'); var myTable = new p5.Table(); 

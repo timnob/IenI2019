@@ -124,12 +124,12 @@ class Bluebird {
     if (spel.actief) {
       this.speler.beweeg();
       for (var o = 0;o<this.obstakels.length;o++) {
-        if(this.obstakels[o].raakt(this.speler) || this.speler.y >= myCanvas.height) {
+        if(this.obstakels[o].raakt(this.speler) || this.speler.y >= canvas.height) {
           this.speler.vx = 0;
           this.afgelopen = true;
         }
       }
-      if (this.speler.x >= myCanvas.width - this.speler.breedte - this.speler.marge) {
+      if (this.speler.x >= canvas.width - this.speler.breedte - this.speler.marge) {
         this.speler.vx = 0;
         this.speler.vy = 0;
         this.speler.a = 0;
@@ -161,7 +161,7 @@ class Bluebird {
 
 
 var canvas;
-var myCanvas;
+canvas;
 var canvasH = 400;
 var canvasB;
 
@@ -174,9 +174,9 @@ function setup() {
   // initialisatie
 
   canvasB = canvasH * achtergrond.width / achtergrond.height;
-  myCanvas = createCanvas(canvasB,canvasH);
-  canvas = myCanvas;
-  myCanvas.parent('processing');
+  canvas = createCanvas(canvasB,canvasH);
+  canvas = canvas;
+  canvas.parent('processing');
   colorMode(RGB,255,255,255,1);
   textFont("Monospace");
   textSize(44);

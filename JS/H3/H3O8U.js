@@ -141,8 +141,8 @@ class Nim {
 
 
 function setup() {
-  var myCanvas = createCanvas(700,400);
-  myCanvas.parent('processing');
+  canvas = createCanvas(700,400);
+  canvas.parent('processing');
   speler = new Speler('Ids');
   spel = new Nim(speler);
 }

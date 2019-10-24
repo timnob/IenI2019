@@ -6,8 +6,8 @@ function preload() {
 }
 
 function setup() {
-  var myCanvas = createCanvas(600,400);
-  myCanvas.parent('processing');
+  canvas = createCanvas(600,400);
+  canvas.parent('processing');
   strandX=0;
   fill('black');
   textFont("Verdana");

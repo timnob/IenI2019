@@ -55,8 +55,8 @@ var raster = {
 }
 
 function setup() {
-  var myCanvas = createCanvas(450,300);
-  myCanvas.parent('processing');
+  canvas = createCanvas(450,300);
+  canvas.parent('processing');
   frameRate(5);
   textFont("Monospace");
   textSize(30);

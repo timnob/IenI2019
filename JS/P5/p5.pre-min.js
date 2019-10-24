@@ -29458,11 +29458,11 @@ p5.prototype.pmouseY = 0;
  * @example
  * <div>
  * <code>
- * var myCanvas;
+ * canvas;
  *
  * function setup() {
  *   //use a variable to store a pointer to the canvas
- *   myCanvas = createCanvas(100, 100);
+ *   canvas = createCanvas(100, 100);
  * }
  *
  * function draw() {
@@ -29471,7 +29471,7 @@ p5.prototype.pmouseY = 0;
  *
  *   //move the canvas to the horizontal mouse position
  *   //rela                    tive to the window
- *   myCanvas.position(winMouseX + 1, windowHeight / 2);
+ *   canvas.position(winMouseX + 1, windowHeight / 2);
  *
  *   //the y of the square is relative to the canvas
  *   rect(20, mouseY, 60, 60);
@@ -29495,11 +29495,11 @@ p5.prototype.winMouseX = 0;
  * @example
  * <div>
  * <code>
- * var myCanvas;
+ * canvas;
  *
  * function setup() {
  *   //use a variable to store a pointer to the canvas
- *   myCanvas = createCanvas(100, 100);
+ *   canvas = createCanvas(100, 100);
  * }
  *
  * function draw() {
@@ -29508,7 +29508,7 @@ p5.prototype.winMouseX = 0;
  *
  *   //move the canvas to the vertical mouse position
  *   //rel                    ative to the window
- *   myCanvas.position(windowWidth / 2, winMouseY + 1);
+ *   canvas.position(windowWidth / 2, winMouseY + 1);
  *
  *   //the x of the square is relative to the canvas
  *   rect(mouseX, 20, 60, 60);
@@ -29533,11 +29533,11 @@ p5.prototype.winMouseY = 0;
  * @example
  * <div>
  * <code>
- * var myCanvas;
+ * canvas;
  *
  * function setup() {
  *   //use a variable to store a pointer to the canvas
- *   myCanvas = createCanvas(100, 100);
+ *   canvas = createCanvas(100, 100);
  *   noStroke();
  *   fill(237, 34, 93);
  * }
@@ -29551,7 +29551,7 @@ p5.prototype.winMouseY = 0;
  *   //according to the horizontal speed
  *   ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);
  *   //move the canvas to the mouse position
- *   myCanvas.position(winMouseX + 1, winMouseY + 1);
+ *   canvas.position(winMouseX + 1, winMouseY + 1);
  * }
  * </code>
  * </div>
@@ -29574,11 +29574,11 @@ p5.prototype.pwinMouseX = 0;
  * @example
  * <div>
  * <code>
- * var myCanvas;
+ * canvas;
  *
  * function setup() {
  *   //use a variable to store a pointer to the canvas
- *   myCanvas = createCanvas(100, 100);
+ *   canvas = createCanvas(100, 100);
  *   noStroke();
  *   fill(237, 34, 93);
  * }
@@ -29592,7 +29592,7 @@ p5.prototype.pwinMouseX = 0;
  *   //according to the vertical speed
  *   ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);
  *   //move the canvas to the mouse position
- *   myCanvas.position(winMouseX + 1, winMouseY + 1);
+ *   canvas.position(winMouseX + 1, winMouseY + 1);
  * }
  * </code>
  * </div>
@@ -31122,7 +31122,7 @@ p5.prototype.createImage = function(width, height) {
  * function setup() {
  *   var c = createCanvas(100, 100);
  *   background(255, 0, 0);
- *   saveCanvas(c, 'myCanvas', 'jpg');
+ *   saveCanvas(c, 'canvas', 'jpg');
  * }
  * </code></div>
  * <div class='norender notest'><code>
@@ -31131,15 +31131,15 @@ p5.prototype.createImage = function(width, height) {
  * function setup() {
  *   var c = createCanvas(100, 100);
  *   background(255, 0, 0);
- *   saveCanvas('myCanvas', 'jpg');
+ *   saveCanvas('canvas', 'jpg');
  *
  *   // all of the following are valid
- *   saveCanvas(c, 'myCanvas', 'jpg');
- *   saveCanvas(c, 'myCanvas.jpg');
- *   saveCanvas(c, 'myCanvas');
+ *   saveCanvas(c, 'canvas', 'jpg');
+ *   saveCanvas(c, 'canvas.jpg');
+ *   saveCanvas(c, 'canvas');
  *   saveCanvas(c);
- *   saveCanvas('myCanvas', 'png');
- *   saveCanvas('myCanvas');
+ *   saveCanvas('canvas', 'png');
+ *   saveCanvas('canvas');
  *   saveCanvas();
  * }
  * </code></div>
@@ -34663,7 +34663,7 @@ p5.PrintWriter = function(filename, extension) {
  *  For example:</p>
  * <pre class='language-javascript'><code>
  * save();
- * save('myCanvas.jpg'); // save a specific canvas with a filename
+ * save('canvas.jpg'); // save a specific canvas with a filename
  * </code></pre>
  *
  *  <p>Alternately, the first parameter can be a pointer to a canvas
@@ -34676,7 +34676,7 @@ p5.PrintWriter = function(filename, extension) {
  *
  * <pre class='language-javascript'><code>
  * // Saves canvas as an image
- * save('myCanvas.jpg');
+ * save('canvas.jpg');
  *
  * // Saves pImage as a png image
  * var img = createImage(10, 10);
@@ -34684,7 +34684,7 @@ p5.PrintWriter = function(filename, extension) {
  *
  * // Saves canvas as an image
  * var cnv = createCanvas(100, 100);
- * save(cnv, 'myCanvas.jpg');
+ * save(cnv, 'canvas.jpg');
  *
  * // Saves p5.Renderer object as an image
  * var gb = createGraphics(100, 100);

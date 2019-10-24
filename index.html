@@ -17,6 +17,7 @@
     <div class="container">
       <div id="processing"></div>
     </div>
+
     <div class="container" id="button-container" style='text-align: center;'>
       <button class="hoofdstuk" onclick="toonCode()">Toon Javascript-Code</button>
       <button class="hoofdstuk" id="Ubutton" onclick="toonUitwerkingen()">Toon Uitwerkingen</button>
@@ -24,6 +25,11 @@
       <div id="code-container" style="display: none;"></div>
     </div>
     <script src="JS/SLO.js"></script>
-    <!-- python3 -m http.server 3000 -->
+    <!-- python3 -m http.server 3000
+    python3 -m http.server 3000 & => behoud van terminal (noteer id)
+    afsluiten (als de ander niet werkt) met kill 13254 (je ID) of geforceerd kill -9 14167
+    vervangcode:  sed -i -e 's/myCanvas/canvas/g' $(find ./JS -type f)
+    sed -i -e 's/myCanvas\ =/canvas\ =/g' $(find ./JS -type f)
+     -->
   </body>
 </html>

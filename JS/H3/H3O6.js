@@ -147,9 +147,9 @@ var canvas;
 function setup() {
   // initialisatie
 
-  var myCanvas = createCanvas(700,400);
-  canvas = myCanvas;
-  myCanvas.parent('processing');
+  canvas = createCanvas(700,400);
+  canvas = canvas;
+  canvas.parent('processing');
   speler = new Speler('Ron');
   steen = new Dobbelsteen();
   spel = new Gokspel(speler,steen);

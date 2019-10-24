@@ -3,8 +3,8 @@ var huisEigenaren = new Array("Smiers","Dekker","Den Hartog","Tolboom","Kremer",
 var kleur = 'lightgray';
 
 function setup() {
-  var myCanvas = createCanvas(1000,300);
-  myCanvas.parent('processing');
+  canvas = createCanvas(1000,300);
+  canvas.parent('processing');
   background('cornflowerblue');
   textFont("Georgia");
   noStroke();

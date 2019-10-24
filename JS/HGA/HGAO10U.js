@@ -8,8 +8,8 @@ function preload() {
 }
 
 function setup() {
-  var myCanvas = createCanvas(750,435);
-  myCanvas.parent('processing');
+  canvas = createCanvas(750,435);
+  canvas.parent('processing');
   frameRate(20);
 }
 

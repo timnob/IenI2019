@@ -9,8 +9,8 @@ var yB = yA + 150;
 var snelheidB = 0;
 
 function setup() {
-  var myCanvas = createCanvas(900,300);
-  myCanvas.parent('processing');
+  canvas = createCanvas(900,300);
+  canvas.parent('processing');
   frameRate(20);
   textFont("Monospace");
   textSize(40);  

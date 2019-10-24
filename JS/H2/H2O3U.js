@@ -6,8 +6,8 @@ function preload() {
 }
 
 function setup() {
-  var myCanvas = createCanvas(600,400);
-  myCanvas.parent('processing');
+  canvas = createCanvas(600,400);
+  canvas.parent('processing');
 }
 
 function draw() {

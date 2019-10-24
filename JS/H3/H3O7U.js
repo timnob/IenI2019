@@ -215,8 +215,8 @@ class codeKraker {
 
 
 function setup() {
-  var myCanvas = createCanvas(740,400);
-  myCanvas.parent('processing');
+  canvas = createCanvas(740,400);
+  canvas.parent('processing');
   spel = new codeKraker();
   spel.teken();
 }

@@ -7,8 +7,8 @@ function preload() {
 }
 
 function setup() {
-  var myCanvas = createCanvas(850,300);
-  myCanvas.parent('processing');
+  canvas = createCanvas(850,300);
+  canvas.parent('processing');
   noLoop();
   background('grey');
   fill('white');

@@ -2,8 +2,8 @@ var letterGrootte = 30;
 var marge = 20;
 
 function setup() {
-  var myCanvas = createCanvas(1000,300);
-  myCanvas.parent('processing');
+  canvas = createCanvas(1000,300);
+  canvas.parent('processing');
   textFont("Verdana");
   textSize(letterGrootte);
   textLeading(1.2*letterGrootte);

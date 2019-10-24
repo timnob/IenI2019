@@ -1,6 +1,6 @@
 function setup() {
-  var myCanvas = createCanvas(910,200);
-  myCanvas.parent('processing');
+  canvas = createCanvas(910,200);
+  canvas.parent('processing');
   noLoop();
   background('gainsboro');
   angleMode(DEGREES);

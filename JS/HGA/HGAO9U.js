@@ -3,8 +3,8 @@ var stipY = new Array(0,10,20,30,40,50,60,70,80,90);
 var diameter = 50;
 
 function setup() {
-  var myCanvas = createCanvas(900,255);
-  myCanvas.parent('processing');
+  canvas = createCanvas(900,255);
+  canvas.parent('processing');
   frameRate(10);
   noStroke();
 }

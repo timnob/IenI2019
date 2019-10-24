@@ -18,8 +18,8 @@ function preload() {
 }
 
 function setup() {
-  var myCanvas = createCanvas(winter.width,winter.height);
-  myCanvas.parent('processing');
+  canvas = createCanvas(winter.width,winter.height);
+  canvas.parent('processing');
   frameRate(10);
 }
 

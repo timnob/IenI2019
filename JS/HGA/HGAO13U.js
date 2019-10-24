@@ -87,8 +87,8 @@ function preload() {
 }
 
 function setup() {
-  var myCanvas = createCanvas(450,450);
-  myCanvas.parent('processing');
+  canvas = createCanvas(450,450);
+  canvas.parent('processing');
   frameRate(10);
   colorMode(RGB,255,255,255,1);
   textFont("Monospace");

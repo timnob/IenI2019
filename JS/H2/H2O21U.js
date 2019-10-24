@@ -34,8 +34,8 @@ function preload() {
 }
 
 function setup() {
-  var myCanvas = createCanvas(450,450);
-  myCanvas.parent('processing');
+  canvas = createCanvas(450,450);
+  canvas.parent('processing');
   colorMode(RGB,255,255,255,1);
   frameRate(10);
   textFont("Verdana");
