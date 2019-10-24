@@ -15,7 +15,7 @@ var kever = {
 
 function preload() {
   bomen = loadImage("images/bomen.jpg");
-  kever.sprite = loadImage("images/kever.png");
+  kever.sprite = loadImage("images/sprites/kever.png");
 }
 
 function setup() {
@@ -29,12 +29,12 @@ function setup() {
 
 function draw() {
   background(bomen);
-  
+
   kever.beweeg();
-  
-  
+
+
   fill('cornsilk');
   rect(0,410,450,40);
-  fill('black');  
+  fill('black');
   text(kever.naam+" bevindt zich in het punt x = " + kever.x + " en y = " + kever.y + ".",5,435);
 }

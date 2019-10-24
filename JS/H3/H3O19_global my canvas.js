@@ -1,3 +1,4 @@
+// var myCanvas;
 
 /*  **********************************************************
     **                  BEGIN klasse Raster                 **
@@ -12,7 +13,7 @@ class Raster {
   }
 
   berekenCelGrootte() {
-    this.celGrootte = canvas.width / this.aantalKolommen;
+    this.celGrootte = myCanvas.width / this.aantalKolommen;
   }
 
   teken() {
@@ -62,8 +63,8 @@ class Vijand {
   beweeg() {
     this.x += floor(random(-1,2)) * this.stapGrootte;
     this.y += floor(random(-1,2)) * this.stapGrootte;
-    this.x = constrain(this.x,0,canvas.width - this.stapGrootte);
-    this.y = constrain(this.y,0,canvas.height - this.stapGrootte);
+    this.x = constrain(this.x,0,myCanvas.width - this.stapGrootte);
+    this.y = constrain(this.y,0,myCanvas.height - this.stapGrootte);
   }
 
   toon() {
@@ -99,8 +100,8 @@ class Jos {
       this.y += this.stapGrootte;
       this.frameNummer = 5;
     }
-    this.x = constrain(this.x,0,canvas.width);
-    this.y = constrain(this.y,0,canvas.height - this.stapGrootte);
+    this.x = constrain(this.x,0,myCanvas.width);
+    this.y = constrain(this.y,0,myCanvas.height - this.stapGrootte);
   }
 
   wordtGeraakt(vijand) {
@@ -179,7 +180,7 @@ class Overloper {
         this.afgelopen = true;
       }
     }
-    if (this.speler.x == canvas.width) {
+    if (this.speler.x == myCanvas.width) {
       this.afgelopen = true;
       this.gewonnen = true;
     }
@@ -191,11 +192,11 @@ class Overloper {
     stroke(100,75,50,.8);
     strokeWeight(5);
     textSize(140);
-    text(" OVERLOPER",0,0,canvas.width,canvas.height / 2);
+    text(" OVERLOPER",0,0,myCanvas.width,myCanvas.height / 2);
     textSize(32);
     strokeWeight(2);
     fill(0,0,0,0.75);
-    text("\nGebruik de pijltjestoetsen om te bewegen\nen ontwijk bommen en vijanden.\nLET OP: je kunt niet (terug) naar links.\n\nDruk op een toets om te beginnen.\n",0,0,canvas.width,canvas.height * 2 / 3);
+    text("\nGebruik de pijltjestoetsen om te bewegen\nen ontwijk bommen en vijanden.\nLET OP: je kunt niet (terug) naar links.\n\nDruk op een toets om te beginnen.\n",0,0,myCanvas.width,myCanvas.height * 2 / 3);
     pop();
   }
 
@@ -208,7 +209,7 @@ class Overloper {
     fill(0);
     stroke(100,75,50,.8);
     strokeWeight(3);
-    text(tekst+'\n\nDruk ENTER voor nieuw spel.',0,0,canvas.width,canvas.height);
+    text(tekst+'\n\nDruk ENTER voor nieuw spel.',0,0,myCanvas.width,myCanvas.height);
     pop();
   }
 
@@ -254,8 +255,10 @@ function preload() {
 }
 
 function setup() {
-  canvas = createCanvas(900,600);
-  canvas.parent('processing');
+  myCanvas = createCanvas(900,600);
+  // canvas = myCanvas; // lelijke oplossing
+  // myCanvas.width width height
+  myCanvas.parent('processing');
   colorMode(RGB,255,255,255,1);
   textFont("Monospace");
   textSize(44);

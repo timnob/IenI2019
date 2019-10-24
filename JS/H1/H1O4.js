@@ -23,7 +23,7 @@ function draw() {
   rect(10,10,30,50);
   // teken de maan
   fill('khaki');
-  // VERVANG DEZE REGEL door een regel die de maan tekent met een diameter van 150 en 50 vanaf de rand
+  // VERVANG DEZE REGEL door een regel die de maan tekent met een diameter van 150 en 25 vanaf de rand
   // teken de boom
   fill('sienna');
   rect(300,250,40,130);
