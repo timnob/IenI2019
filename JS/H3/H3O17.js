@@ -12,7 +12,7 @@ class Auto {
     this.l = g * this.schaal;
     this.kleur = 'green';
   }
-  
+
   aangeraakt(x,y) {
     if (dist(x,y,this.x + this.l/2,this.y + this.l/2) < this.l / 3) {
       return true;
@@ -21,7 +21,7 @@ class Auto {
       return false;
     }
   }
-  
+
   teken() {
       push();
       noStroke();
@@ -53,7 +53,7 @@ class Cel {
     this.kleur = 0;
     this.tekstKleur = 127;
   }
-  
+
   wordtGeraakt(s) {
     if (s.x > this.x) {
       this.tekstKleur = 'orange';
@@ -63,7 +63,7 @@ class Cel {
     }
     return false;
   }
-  
+
   teken() {
     push();
     fill(this.kleur);
@@ -87,7 +87,7 @@ class Racer {
     this.actief = false;
     this.afgelopen = false;
   }
-  
+
   maakParcours(patroon,grootte) {
     var rooster = [];
     for (var rij = 0; rij < canvas.height / grootte; rij++) {
@@ -102,14 +102,14 @@ class Racer {
     }
     return rooster;
   }
-  
+
   beginScherm() {
     push();
     fill(0);
     text("Dit is een simpel Race-spel. Bestuur je auto met het touchscreen.\n\nBegin het spel door het scherm aan te raken.",0,0,canvas.width,canvas.height)
     pop();
   }
-  
+
   eindScherm() {
     push();
     fill('yellow');
@@ -125,8 +125,8 @@ class Racer {
       text("HELAAS: je bent AF.",0,0,canvas.width,canvas.height);
     }
     pop();
-  }  
-  
+  }
+
   teken() {
     background(200);
     textSize(40);
@@ -151,22 +151,21 @@ class Racer {
     ********************************************************** */
 
 
-canvas;
 var rooster = [];
 var patroon = [1,1,0,0,0,0,0,
                0,1,0,1,1,1,0,
                0,1,1,1,0,1,0,
                0,0,0,0,0,1,1];
-               
+
 var grootte = 100;
 
 function setup() {
   // initialisatie
-  
+
   canvas = createCanvas(700,400);
   canvas.parent('processing');
   textFont("Monospace");
-  textSize(20); 
+  textSize(20);
   textAlign(CENTER,CENTER);
   fill('black');
   speler = new Auto(grootte);
@@ -183,7 +182,7 @@ function touchMoved() {
         spel.speler.kleur = 'red';
         spel.afgelopen = true;
       }
-    } 
+    }
     spel.teken();
   }
 }

@@ -3,8 +3,7 @@ var opgave = {
   hoofdstuk: null,
   nummer: null,
   uitwerking: false,
-  y: null,
-  
+
   verwerkCode(c) {
     this.code = c;
     if (this.code.endsWith("U")) {
@@ -18,7 +17,7 @@ var opgave = {
     this.code = c;
     this.laadJavascriptBestand();
   },
-  
+
   laadJavascriptBestand() {
       if (this.hoofdstuk == 'FU') {
           this.hoofdstuk = 'OBF';
@@ -31,11 +30,11 @@ var opgave = {
     document.getElementById("code-container").innerHTML = '<pre class="line-numbers" data-src="'+url+'"></pre>';
     if (this.uitwerking || this.hoofdstuk == 'VB' || this.hoofdstuk == 'OBF' || this.hoofdstuk == 'DE') {
         var uitw = document.getElementById("Ubutton");
-        uitw.style.display = "none";        
+        uitw.style.display = "none";
     }
     if (!this.uitwerking) {
         var terug = document.getElementById("Tbutton");
-        terug.style.display = "none";    
+        terug.style.display = "none";
     }
   },
 
@@ -45,7 +44,7 @@ var opgave = {
     elChild.innerHTML = ' <h4 style="text-align: center; font-size: 30px; font-family: courier; color: red; border: 2px solid red; padding: 20px;";>Dit is een tijdelijke demo-versie. &copy; SLO 9-2019</h3>';
     el.insertBefore(elChild, el.firstChild);
   },
-  
+
   toonMenu() {
     var nmax;
     var zero="0";
@@ -62,11 +61,11 @@ var opgave = {
     else if (this.hoofdstuk == 'GA') {
         htmlContent += 'Gamification '+this.nummer;
         nmax = 14;
-    } 
+    }
     else if (this.hoofdstuk == 'DE') {
         htmlContent += 'Demo '+this.nummer;
         nmax = 0;
-    }    
+    }
     else {
         if (this.uitwerking) {
             htmlContent += '<i>uitwerking</i> ';
@@ -76,19 +75,19 @@ var opgave = {
         if (this.hoofdstuk == 3) { nmax = 30; }
         htmlContent += 'Opgave '+this.nummer+' (<i>H'+this.hoofdstuk+'</i>)';
     }
-    htmlContent += ' | Kies  <button class="hoofdstuk" onclick="selecteerOpgave(\'HVBO1\');">VB</button>';
-    htmlContent += ' <button class="hoofdstuk" onclick="selecteerOpgave(\'H1O1\');">H1</button>';
-    htmlContent += ' <button class="hoofdstuk" onclick="selecteerOpgave(\'H2O1\');">H2</button>';
-    htmlContent += ' <button class="hoofdstuk" onclick="selecteerOpgave(\'H3O1\');">H3</button>';
-    htmlContent += ' <button class="hoofdstuk" onclick="selecteerOpgave(\'HFUO1\');">OBF</button>';
-    htmlContent += ' <button class="hoofdstuk" onclick="selecteerOpgave(\'HGAO1\');">GA</button>';
+    htmlContent += ' | Kies  <button class="hoofdstuk" onclick="selecteerOpgave(\'HVBO01\');">VB</button>';
+    htmlContent += ' <button class="hoofdstuk" onclick="selecteerOpgave(\'H1O01\');">H1</button>';
+    htmlContent += ' <button class="hoofdstuk" onclick="selecteerOpgave(\'H2O01\');">H2</button>';
+    htmlContent += ' <button class="hoofdstuk" onclick="selecteerOpgave(\'H3O01\');">H3</button>';
+    htmlContent += ' <button class="hoofdstuk" onclick="selecteerOpgave(\'HFUO01\');">OBF</button>';
+    htmlContent += ' <button class="hoofdstuk" onclick="selecteerOpgave(\'HGAO01\');">GA</button>';
     // htmlContent += ' <button class="hoofdstuk" onclick="resetSessie();">SESSIE</button>';
     htmlContent += '<br>';
     for (n=1;n <= nmax;n++) {
         if (n==10) {
             zero="";
         }
-        htmlContent += '<button onclick="selecteerOpgave(\'H'+this.hoofdstuk+'O'+n+'\');">'+zero+n+'</button>';
+        htmlContent += '<button onclick="selecteerOpgave(\'H'+this.hoofdstuk+'O'+zero+n+'\');">'+zero+n+'</button>';
         if (n % 15 == 0) {
             htmlContent+="<br>";
         }
@@ -102,7 +101,7 @@ var opgave = {
 
 if (houdbaar()) {
     if (typeof localStorage.opgave == 'undefined') {
-        opgaveCode = 'HVBO1';
+        opgaveCode = 'HVBO01';
         localStorage.setItem('opgave',opgaveCode);
     }
     else {
@@ -162,6 +161,6 @@ function gaTerug() {
 
 function keyPressed() {
   if (keyCode == 83) {
-    saveCanvas('afbeelding', 'png');
+    // saveCanvas('afbeelding', 'png');
   }
 }
