@@ -4,7 +4,7 @@ class Circuit {
     this.breedteBaan = b;
     this.kleur = 200;
   }
-  
+
   teken() {
     push();
     noStroke();
@@ -23,7 +23,7 @@ class Man {
     this.x = x;
     this.y = y;
     this.loopMarge = 35;
-    this.afstandMiddenTotVoet = 25;    
+    this.afstandMiddenTotVoet = 25;
     this.snelheid = 10;
     this.sx = 0;
     this.sy = 0;
@@ -31,7 +31,7 @@ class Man {
     this.fr = 6;
     this.sprites = s;
   }
-  
+
   loop() {
     if (keyIsDown(LEFT_ARROW)) {
       this.lr = (this.lr - 1) % 8;
@@ -54,7 +54,7 @@ class Man {
       this.fr = (this.fr + 1) % 8;
     }
   }
-  
+
   raakt(b) {
     var afstandBinnenRand = round(dist(canvas.width / 2,canvas.height / 2,this.x,this.y + this.afstandMiddenTotVoet) - b.binnenStraal - this.loopMarge);
     var afstandBuitenRand = round(b.binnenStraal + b.breedteBaan - this.loopMarge - dist(canvas.width / 2,canvas.height / 2,this.x,this.y + this.afstandMiddenTotVoet));
@@ -65,14 +65,14 @@ class Man {
       return false;
     }
   }
-  
+
   toon() {
     push();
     imageMode(CENTER);
     image(sprites[this.lr][this.fr],this.x,this.y);
     fill(0,255,0,0.25);
     stroke(0,255,0,0.75);
-    ellipse(this.x,this.y + this.afstandMiddenTotVoet,2*this.loopMarge);   
+    ellipse(this.x,this.y + this.afstandMiddenTotVoet,2*this.loopMarge);
     fill(255,0,0,1);
     stroke(255,0,0,1);
     ellipse(this.x,this.y,5);
@@ -101,7 +101,7 @@ function preload() {
     sw = loadImage("images/sprites/lopen/Walking/sw_p" + b + ".png");
     w = loadImage("images/sprites/lopen/Walking/w_p" + b + ".png");
     nw = loadImage("images/sprites/lopen/Walking/nw_p" + b + ".png");
-    st = loadImage("images/sprites/lopen/Standing/" + (b - 1) + ".png");    
+    st = loadImage("images/sprites/lopen/Standing/" + (b - 1) + ".png");
     noord.push(n);
     noordoost.push(ne);
     oost.push(e);
@@ -116,8 +116,8 @@ function preload() {
 }
 
 function setup() {
-  var myCanvas = createCanvas(450,450);
-  myCanvas.parent('processing');
+  canvas = createCanvas(450,450);
+  canvas.parent('processing');
   frameRate(10);
   colorMode(RGB,255,255,255,1);
   textFont("Monospace");
@@ -138,7 +138,7 @@ function draw() {
   else {
     baan.kleur = 200;
   }
-  
+
   if (mouseIsPressed) {
     if (speler.snelheid == 0) {
       speler.snelheid = 10;

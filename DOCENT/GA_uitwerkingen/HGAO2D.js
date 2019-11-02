@@ -1,6 +1,6 @@
 function setup() {
-  var myCanvas = createCanvas(910,200);
-  myCanvas.parent('processing');
+  canvas = createCanvas(910,200);
+  canvas.parent('processing');
   noLoop();
   background('gainsboro');
   angleMode(DEGREES);
@@ -32,7 +32,7 @@ function draw() {
   push();
   rotate(60);
   rect(0,0,80,80);
-  pop();   
+  pop();
   translate(80 + 30,0);
   push();
   rotate(60);

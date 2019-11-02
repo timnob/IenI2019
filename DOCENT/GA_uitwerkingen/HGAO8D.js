@@ -9,8 +9,8 @@ function preload() {
 }
 
 function setup() {
-  var myCanvas = createCanvas(944,637);
-  myCanvas.parent('processing');
+  canvas = createCanvas(944,637);
+  canvas.parent('processing');
 }
 
 function draw() {

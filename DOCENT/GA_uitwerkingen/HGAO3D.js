@@ -1,8 +1,8 @@
 var hoogte = 150;
 
 function setup() {
-  var myCanvas = createCanvas(450,300);
-  myCanvas.parent('processing');
+  canvas = createCanvas(450,300);
+  canvas.parent('processing');
   background('gainsboro');
   noStroke();
   fill('silver');

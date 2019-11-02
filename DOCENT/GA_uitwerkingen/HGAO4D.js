@@ -10,18 +10,18 @@ var snelheidB = 0;
 var acceleratieB = 0.01;
 
 function setup() {
-  var myCanvas = createCanvas(900,300);
-  myCanvas.parent('processing');
+  canvas = createCanvas(900,300);
+  canvas.parent('processing');
   frameRate(20);
   textFont("Monospace");
-  textSize(40);  
+  textSize(40);
 }
 
 function draw() {
   background('gainsboro');
   noStroke();
   fill('silver');
-  rect(0,0,900,150); 
+  rect(0,0,900,150);
   fill('black');
   text("A: x="+xA+" v="+snelheidA,10,150);
   text("B: x="+round(xB)+" v="+round(10*snelheidB)/10,10,300);

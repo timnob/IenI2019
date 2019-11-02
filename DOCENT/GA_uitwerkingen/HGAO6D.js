@@ -2,8 +2,8 @@ var xToby = 225;
 var yToby = 5;
 
 function setup() {
-  var myCanvas = createCanvas(450,450);
-  myCanvas.parent('processing');
+  canvas = createCanvas(450,450);
+  canvas.parent('processing');
 }
 
 function draw() {
@@ -13,7 +13,7 @@ function draw() {
   }
   if (keyIsDown(RIGHT_ARROW)) {
     xToby += 5;
-  }  
+  }
   yToby++;
   xToby = constrain(xToby,75,375);
 
@@ -23,7 +23,7 @@ function draw() {
   }
 
   tekenObstakel();
-  
+
   if (yToby >= 300) {
     background('white');
     noLoop();
@@ -46,12 +46,12 @@ function tekenToby(x,y) {
   fill('black');
   noStroke();
   ellipse(-25,0,5);
-  ellipse(25,0,5);  
+  ellipse(25,0,5);
   translate(0,45);
   noStroke();
   fill('orangered');
   rect(-70,0,140,15);
-  rect(-65,20,130,20);  
+  rect(-65,20,130,20);
   pop();
 }
 

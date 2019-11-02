@@ -2,7 +2,7 @@ var spoor = {
   grijsTint: 150,
   y: 200,
   dikte: 5,
-  
+
   teken() {
     push();
     fill(this.grijsTint);
@@ -16,7 +16,7 @@ var trein = {
   y: 100,
   snelheid: -10,
   schaal: 5,
-  sprite: null,  
+  sprite: null,
 
   beweeg() {
     if (keyIsDown(LEFT_ARROW)) {
@@ -34,7 +34,7 @@ var trein = {
       this.x = -1*this.sprite.width / this.schaal;
     }
   },
-  
+
   toon() {
     image(this.sprite,this.x,this.y,this.sprite.width / this.schaal,this.sprite.height / this.schaal);
   }
@@ -43,12 +43,12 @@ var trein = {
 function preload() {
   winter = loadImage("images/backgrounds/Winter.png");
   stoomTrein = loadImage("images/sprites/stoomtrein.png");
-  trein.sprite = stoomTrein;  
+  trein.sprite = stoomTrein;
 }
 
 function setup() {
-  var myCanvas = createCanvas(winter.width,winter.height);
-  myCanvas.parent('processing');
+  canvas = createCanvas(winter.width,winter.height);
+  canvas.parent('processing');
   frameRate(10);
   trein.x = canvas.width;
 }

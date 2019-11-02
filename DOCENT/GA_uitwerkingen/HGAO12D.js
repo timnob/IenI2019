@@ -3,7 +3,7 @@ var raster = {
   Nkolom: 9,
   aantal: 1,
   grootte: 50,
-  
+
   teken() {
     push();
     fill('linen');
@@ -14,9 +14,9 @@ var raster = {
         rect(kolom*this.grootte,rij*this.grootte,this.grootte,this.grootte);
       }
     }
-    pop();    
+    pop();
   },
-  
+
   muisOver(x,y) {
     push();
     fill('lightsalmon');
@@ -25,7 +25,7 @@ var raster = {
     rect(floor(x / this.grootte)*this.grootte,floor(y / this.grootte)*this.grootte,this.grootte,this.grootte);
     pop();
   },
-  
+
   plaatsStip(x,y) {
     var raak = false
     for (var a = 0;a < this.aantal;a++) {
@@ -35,13 +35,13 @@ var raster = {
       if (this.controleerRaak(x,y,kolom,rij)) {
         noLoop();
       }
-    }   
+    }
     this.aantal++;
   },
-  
+
   controleerRaak(mx,my,k,r) {
     var muisKolom = floor(mx / this.grootte);
-    var muisRij = floor(my / this.grootte);   
+    var muisRij = floor(my / this.grootte);
     if (k == muisKolom && r == muisRij) {
       return true;
     }
@@ -49,7 +49,7 @@ var raster = {
       return false;
     }
   },
-  
+
   tekenStip(x,y) {
     var str = 15;
     push();
@@ -62,8 +62,8 @@ var raster = {
 }
 
 function setup() {
-  var myCanvas = createCanvas(450,300);
-  myCanvas.parent('processing');
+  canvas = createCanvas(450,300);
+  canvas.parent('processing');
   frameRate(5);
   textFont("Monospace");
   textSize(30);
@@ -76,5 +76,5 @@ function draw() {
   if (mouseIsPressed && mouseX >=0 && mouseX <= canvas.width && mouseY >= 0 && mouseY <= canvas.height) {
     raster.plaatsStip(mouseX,mouseY);
   }
-  text(raster.aantal,10,35);  
+  text(raster.aantal,10,35);
 }

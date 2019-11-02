@@ -6,14 +6,14 @@ class Vijand {
     this.v = 10;
     this.levens = 5;
   }
-  
+
   beweeg() {
     this.y += this.v;
     if (this.y > canvas.height - this.diameter / 2 || this.y < this.diameter / 2) {
       this.v *= -1;
     }
   }
-  
+
   wordtGeraakt(k) {
     if (dist(this.x,this.y,k.x,k.y) <= (k.diameter + this.diameter) / 2) {
       k.y = -100;
@@ -24,7 +24,7 @@ class Vijand {
       return false;
     }
   }
-  
+
   teken() {
     push();
     fill('lightcoral');
@@ -43,11 +43,11 @@ class Kogel {
     this.diameter = 20;
     this.v = 10;
   }
-  
+
   beweeg() {
     this.x += this.v;
   }
-  
+
   teken() {
     push();
     noStroke();
@@ -73,17 +73,17 @@ class Kanon {
       this.kogels.push(new Kogel(this.x + this.l,this.y + 0.5 * this.h));
       this.geschoten++;
     }
-  }  
-    
+  }
+
   beweeg() {
       if (keyIsDown(UP_ARROW)) {
         this.y -= this.v;
       }
       if (keyIsDown(DOWN_ARROW)) {
         this.y += this.v;
-      }      
+      }
     }
-  
+
   teken() {
     push();
     noStroke();
@@ -94,8 +94,8 @@ class Kanon {
 }
 
 function setup() {
-  var myCanvas = createCanvas(900,600);
-  myCanvas.parent('processing');
+  canvas = createCanvas(900,600);
+  canvas.parent('processing');
   textSize(40);
   textFont("Monospace");
   k = new Kanon();

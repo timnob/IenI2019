@@ -1,8 +1,8 @@
 var schaal = 1;
 
 function setup() {
-  var myCanvas = createCanvas(450,450);
-  myCanvas.parent('processing');
+  canvas = createCanvas(450,450);
+  canvas.parent('processing');
 }
 
 function draw() {
@@ -13,7 +13,7 @@ function draw() {
   else {
     schaal = 1;
   }
-  
+
   tekenToby(schaal);
 }
 
@@ -32,12 +32,12 @@ function tekenToby(s) {
   ellipse(25,0,30);
   fill('black');
   ellipse(-25,0,3);
-  ellipse(25,0,3);  
+  ellipse(25,0,3);
   translate(0,45);
   noStroke();
   fill('orangered');
   rect(-70,0,140,15);
-  rect(-65,20,130,20);  
+  rect(-65,20,130,20);
   pop();
 }
 
