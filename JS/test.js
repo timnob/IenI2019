@@ -1,18 +1,24 @@
+
+
 function setup() {
   canvas = createCanvas(450,450);
-  background('silver');
   canvas.parent('processing');
-  //noLoop();
+  background('silver');
+  noLoop();
 }
 
 function draw() {
   noStroke();
-  fill('deepskyblue');
-  ellipse(225,225,300);
-  fill('aquamarine');
-  rect(125,125,200,200);
-  fill('skyblue');
-  rect(135,135,175,175);
-  fill('blue');
-  rect(150,150,150,150)
+  for( var n = 0; n <5 ; n++) {
+      tekenCirkel();
+      translate(70,0);
+  }
+  
+
+}
+function tekenCirkel() {
+    push();
+    fill('dodgerblue');
+    ellipse(90,200,70);
+    pop();
 }

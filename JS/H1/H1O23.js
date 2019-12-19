@@ -14,13 +14,21 @@ function draw() {
   background('olive');
   
   if (keyIsDown(UP_ARROW)) {
-    y -= 5;
+    y -= 20;
   }
   if (keyIsDown(DOWN_ARROW)) {
-    y += 5;
+    y += 20;
+  }
+  if (keyIsDown(RIGHT_ARROW)) {
+    x += 20;
+  }
+  if (keyIsDown(LEFT_ARROW)) {
+    x -= 20;
   }
 
+
   y = constrain(y,0,height - 100);
+  x = constrain(x,0, width - 100);
 
   if (y >= 75 && y <= 225) {
     fill('chartreuse');
